@@ -28,18 +28,18 @@
 
   var defaultOptions = {
     // The class name so you can style the text
-    className: 'ct-target-line',
+    className: 'ct-goal-line',
     // The axis to draw the line. y == vertical bars, x == horizontal
     axis: 'y',
-    // What value the target line should be drawn at
+    // What value the goal line should be drawn at
     value: null
   };
 
   Chartist.plugins = Chartist.plugins || {};
 
-  Chartist.plugins.ctTargetLine = function(options) {
+  Chartist.plugins.ctGoalLine = function(options) {
     options = Chartist.extend({}, defaultOptions, options);
-    return function ctTargetLine (chart) {
+    return function ctGoalLine (chart) {
 
       chart.on('created', function(context) {
         var projectTarget = {

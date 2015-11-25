@@ -10,7 +10,13 @@ A simple Chartist JavaScript plugin to put goal lines on your charts. Check out 
 project page too: <a
 href="https://github.com/YorkshireInteractive/chartist-bar-labels">YorkshireInteractive/chartist-goal-line</a>.
 
-      
+
+## Options
+
+- `className`: The class name so you can style the text. Default: _'ct-goal-line'_.
+- `axis`: The axis to draw the line. y == vertical bars, x == horizontal. Default: _'y'_.
+- `value`: What value the goal line should be drawn at
+
 ## Default usage
 
 <div class="ct-chart"><img src="images/ct-chart.png"></div>
@@ -27,7 +33,7 @@ var chart1 = new Chartist.Bar('.ct-chart', {
     onlyInteger: true
   },
   plugins: [
-    Chartist.plugins.ctTargetLine({
+    Chartist.plugins.ctGoalLine({
       value: 14
     })
   ]
@@ -62,7 +68,7 @@ var chart2 = new Chartist.Bar('.ct-chart-2', {
     offset: 135,
   },
   plugins: [
-    Chartist.plugins.ctTargetLine({
+    Chartist.plugins.ctGoalLine({
       value: 100,
       axis: 'x'
     })

@@ -27,6 +27,14 @@
         text-decoration: none;
       }
 
+      code {
+        font-weight: bold;
+      }
+
+      pre code {
+        font-weight: normal;
+      }
+
       h1,h2,h3,h4,h5,h6 {
         font-family: Oswald, helvetica, sans-serif;
         text-transform: uppercase;
@@ -96,7 +104,7 @@
         fill: #fff;
       }
 
-      .ct-target-line {
+      .ct-goal-line {
         stroke: #062A5F;
         stroke-width: 2px;
         stroke-dasharray: 4px;
@@ -126,7 +134,7 @@
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
     <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-    <script src="scripts/chartist-bar-labels.js"></script>
+    <script src="scripts/chartist-goal-line.js"></script>
     <script>
       // Add nice styling to codez
       $('pre').addClass('prettyprint');
@@ -148,7 +156,7 @@
           onlyInteger: true
         },
         plugins: [
-          Chartist.plugins.ctTargetLine({
+          Chartist.plugins.ctGoalLine({
             value: 14
           })
         ]
@@ -179,7 +187,7 @@
           offset: 135,
         },
         plugins: [
-          Chartist.plugins.ctTargetLine({
+          Chartist.plugins.ctGoalLine({
             value: 100,
             axis: 'x'
           })
