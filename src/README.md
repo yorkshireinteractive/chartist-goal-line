@@ -9,6 +9,7 @@ layout: default.html
 A simple Chartist JavaScript plugin to put goal lines on your charts. Check out the
 project page too: [YorkshireInteractive/chartist-goal-line](https://github.com/YorkshireInteractive/chartist-goal-line)
 
+You can download the demo and source here: <a href="https://github.com/yorkshireinteractive/chartist-goal-line/archive/gh-pages.zip">Download</a>
 
 ## Options
 
