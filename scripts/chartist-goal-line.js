@@ -44,7 +44,7 @@
       chart.on('created', function(context) {
         var projectTarget = {
           y: function (chartRect, bounds, value) {
-            var targetLineY = chartRect.y1 - (chartRect.height() / bounds.max * value);
+            var targetLineY = chartRect.y1 - (chartRect.height() / bounds.range * (value - bounds.min));
 
             return {
               x1: chartRect.x1,
