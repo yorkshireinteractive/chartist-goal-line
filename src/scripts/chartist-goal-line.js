@@ -54,7 +54,7 @@
             }
           },
           x: function (chartRect, bounds, value) {
-            var targetLineX = chartRect.x1 + (chartRect.width() / bounds.max * value);
+            var targetLineX = chartRect.x1 + (chartRect.width() / bounds.range * (value - bounds.min));
 
             return {
               x1: targetLineX,
