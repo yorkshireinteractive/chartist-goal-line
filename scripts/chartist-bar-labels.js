@@ -37,14 +37,14 @@
 
   Chartist.plugins = Chartist.plugins || {};
 
-  Chartist.plugins.ctTargetLine = function(options) {
+  Chartist.plugins.ctGoalLine = function(options) {
     options = Chartist.extend({}, defaultOptions, options);
-    return function ctTargetLine (chart) {
+    return function ctGoalLine (chart) {
 
       chart.on('created', function(context) {
         var projectTarget = {
           y: function (chartRect, bounds, value) {
-            var targetLineY = chartRect.y1 - (chartRect.height() / bounds.max * value);
+            var targetLineY = chartRect.y1 - (chartRect.height() / bounds.range * (value - bounds.min));
 
             return {
               x1: chartRect.x1,
@@ -54,7 +54,7 @@
             }
           },
           x: function (chartRect, bounds, value) {
-            var targetLineX = chartRect.x1 + (chartRect.width() / bounds.max * value);
+            var targetLineX = chartRect.x1 + (chartRect.width() / bounds.range * (value - bounds.min));
 
             return {
               x1: targetLineX,

@@ -132,7 +132,9 @@ href=&quot;https://github.com/YorkshireInteractive/chartist-bar-labels&quot;</a>
     onlyInteger: true
   },
   plugins: [
-    Chartist.plugins.ctBarLabels()
+    Chartist.plugins.ctGoalLine({
+      value: 14
+    })
   ]
 });
 </code></pre>
@@ -161,17 +163,14 @@ href=&quot;https://github.com/YorkshireInteractive/chartist-bar-labels&quot;</a>
     offset: 135,
   },
   plugins: [
-    Chartist.plugins.ctBarLabels({
-      position: {
-        x: function (data) {
-          return data.x1 + 50
-        }
-      },
+    Chartist.plugins.ctGoalLine({
+      value: 100,
+      axis: 'x',
       labelOffset: {
         y: 7
       },
       labelInterpolationFnc: function (text) {
-        return text + &#39;%&#39;
+        return text + '%'
       }
     })
   ]
@@ -211,7 +210,9 @@ href=&quot;https://github.com/YorkshireInteractive/chartist-bar-labels&quot;</a>
           onlyInteger: true
         },
         plugins: [
-          Chartist.plugins.ctBarLabels()
+          Chartist.plugins.ctGoalLine({
+			value: 14
+		  })
         ]
       });
 
@@ -240,12 +241,9 @@ href=&quot;https://github.com/YorkshireInteractive/chartist-bar-labels&quot;</a>
           offset: 135,
         },
         plugins: [
-          Chartist.plugins.ctBarLabels({
-            position: {
-              x: function (data) {
-                return data.x1 + 50
-              }
-            },
+          Chartist.plugins.ctGoalLine({
+            value: 100,
+            axis: 'x',
             labelOffset: {
               y: 7
             },
